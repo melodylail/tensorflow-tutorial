@@ -1,0 +1,17 @@
+1.  not using the python environment from anaconda2 and anaconda3, since luq build tensorflow from source which is compiled/setup with default python runtime
+    export PATH=/home/luq/scala-2.12.1/bin:/home/luq/Android/Sdk/platform-tools:/home/luq/Android/Sdk/tools:/home/luq/Dev/depot_tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/local/go/bin
+2.  as https://www.tensorflow.org/install/install_sources said, not run python command in /home/luq/Dev/tensorflow directory.
+
+luq@luq-nuc:~/Dev/tensorflow$ cd ..
+luq@luq-nuc:~/Dev$ python
+Python 2.7.12 (default, Nov 19 2016, 06:48:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> print(sess.run(hello))
+2017-05-11 23:01:14.473059: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 8 visible devices
+2017-05-11 23:01:14.476735: I tensorflow/compiler/xla/service/service.cc:183] XLA service 0x3cf3740 executing computations on platform Host. Devices:
+2017-05-11 23:01:14.476826: I tensorflow/compiler/xla/service/service.cc:191]   StreamExecutor device (0): <undefined>, <undefined>
+Hello, TensorFlow!
